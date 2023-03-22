@@ -37,9 +37,7 @@ func ConfigInit() bool {
 	fn := reflect.ValueOf(&Env).Elem()
 	for i := 0; i < fn.NumField(); i++ {
 		value := converse.ParseToString(fn.Field(i).Interface())
-		logg.Printlogger_JsonMarshalIndent("dddd", "dddd", value)
 		reflect.ValueOf(&Env).Elem().FieldByName(fn.Type().Field(i).Name).SetString(value)
-		// }
 	}
 
 	// logg.Printlogger_JsonMarshalIndent("", "", Env)
