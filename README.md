@@ -156,7 +156,7 @@ type (
 )
 
 //* Function ที่ทำให้ Port และ Adapter เชื่อมต่อกัน
-//* สสำหรับ Business-side/Domain ที่มี Dependency กับ person Repository มาเรียกใช้โดยจะต้อง Inject Database Connection มาด้วย 
+//* สำหรับ Business-side/Domain ที่มี Dependency กับ person Repository มาเรียกใช้โดยจะต้อง Inject Database Connection มาด้วย 
 func NewPersonRepo(dbConnect *gorm.DB) PersonRepo {
 	return &personRepo{
 		DBConnect: dbConnect,
