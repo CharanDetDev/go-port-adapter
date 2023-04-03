@@ -136,12 +136,12 @@ func (service *personService) GetPersonByID(personId int, person *repository.Per
 ```golang
 
 type (
-    //* Adapter
+	//* Adapter
 	personRepo struct {
 		DBConnect *gorm.DB
 	}
 
-    //* Interface Port
+	//* Interface Port
 	PersonRepo interface {
 		GetPersonByID(personID int, person *PersonModel) error
 	}
